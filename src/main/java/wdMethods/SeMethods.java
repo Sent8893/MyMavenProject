@@ -54,9 +54,7 @@ public class SeMethods extends Reporter implements WdMethods{
 		try {
 			if(browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-				ChromeOptions options = new ChromeOptions();
-				options.setHeadless(true);
-				driver = new ChromeDriver(options);
+				driver = new ChromeDriver();
 			} else if(browser.equalsIgnoreCase("ie")) {
 				System.setProperty("webdriver.ie.driver", "./drivers/internetexplorerserver.exe");
 				driver = new InternetExplorerDriver();
