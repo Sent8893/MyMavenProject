@@ -68,7 +68,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>Leaftaps</finalName>
+		<finalName>SenthilProject</finalName>
 	</build> 
 </project>
 
