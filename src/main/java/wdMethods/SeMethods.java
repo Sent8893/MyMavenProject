@@ -21,6 +21,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -53,7 +54,9 @@ public class SeMethods extends Reporter implements WdMethods{
 		try {
 			if(browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-				driver = new ChromeDriver();
+				ChromeOptions options = new ChromeOptions();
+				options.setHeadless(true);
+				driver = new ChromeDriver(options);
 			} else if(browser.equalsIgnoreCase("ie")) {
 				System.setProperty("webdriver.ie.driver", "./drivers/internetexplorerserver.exe");
 				driver = new InternetExplorerDriver();
